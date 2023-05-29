@@ -2,13 +2,14 @@ package travel;
 
 public class Passenger {
     private String email, password, name, type;
-    private long number;
-    public Passenger(String email, String password, String name, String type, long number){
+    private double number, balance;
+    public Passenger(String email, String password, String name, String type, double number, double balance){
         this.email = email;
         this.password = password;
         this.name = name;
         this.type = type;
         this.number = number;
+        this.balance = balance;
     }
 
 
@@ -29,7 +30,19 @@ public class Passenger {
         return type;
     }
 
-    public long getNumber(){
+    public double getNumber(){
         return number;
     }
+
+    public double getBalance(){
+        return balance;
+    }
+
+    //setter
+    public double setBalance(double balance) {
+        this.balance = balance;
+        return balance;
+    }
+
+
 }

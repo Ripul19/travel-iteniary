@@ -5,29 +5,30 @@ import data.GetDestination;
 import data.GetTravelPackage;
 import data.GetUser;
 
-import java.util.Arrays;
+import javax.swing.*;
+import java.awt.print.Book;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //data created
-        List<Passenger> passengers= GetUser.createHardCodedUser();
+        List<Passenger> passengers = GetUser.createHardCodedUser();
         List<Activities> activities = GetActivities.createHardCodedActivities();
         List<Destination> destinations = GetDestination.createHardCodedDestinations(activities);
         List<TravelPackage> packages = GetTravelPackage.createHardCodedTravelPackage(destinations);
 
+        //int option = Integer.parseInt(JOptionPane.showInputDialog("Enter your choice"));
         //login
-        //Passenger passenger = Login.welcome(passengers);
+        Passenger passenger = Login.welcome(passengers);
 
-        for(Passenger pass : passengers){
-            System.out.println(pass);
-        }
+        //travel package menu with destination and activities
+        TravelPackage booked= Booking.book(packages, passenger);
 
-        //Travel packages data
-        //travel package menu
-        //Destination data
-        //Destination menu
-        //Activity Data
-        //Activity menu
+        //activities
+        Activities activitySelected = Booking.activities(booked, passenger);
+
+        //Printing of the booking
+        Booking.print(booked, activitySelected, passenger);
     }
 }

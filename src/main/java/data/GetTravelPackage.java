@@ -12,16 +12,17 @@ public class GetTravelPackage {
 
 //        List<Destination> destinations = GetDestination.createHardCodedDestinations();
         List<TravelPackage> packages = new ArrayList<>();
-        List<Destination> copy = new ArrayList<>();
 
         for(Destination destination: destinations){
+            List<Destination> copy = new ArrayList<>();
             if(destination.getName().equals("Manali")){
                 copy.add(destination);
-                packages.add(new TravelPackage("North India", copy, 5));
+                packages.add(new TravelPackage("North India", copy, 5, 5000));
             }
             else if(destination.getName().equals("Kerala")){
-                copy.add(destination);
-                packages.add(new TravelPackage("South India", copy, 5));
+                List<Destination> copy2 = new ArrayList<>();
+                copy2.add(destination);
+                packages.add(new TravelPackage("South India", copy2, 5, 5000));
             }
         }
 

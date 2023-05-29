@@ -5,15 +5,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Login {
-    public static Passenger welcome(List<Passenger> passengers){
+    public static Passenger welcome(List<Passenger> passengers) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("------------------------------------------------------------------");
         System.out.println("Welcome");
         System.out.println("------------------------------------------------------------------");
+        Passenger pass = null;
+        boolean yes = false;
 
-
-        while(true) {
+        while (true) {
 
             System.out.println("Press 1 for Login");
             System.out.println("Press 2 for Exit");
@@ -30,23 +31,22 @@ public class Login {
                 System.out.println("Enter your Password");
                 String password = sc.nextLine();
 
-                for(Passenger passenger : passengers) {
+                for (Passenger passenger : passengers) {
                     if (passenger.getEmail().equals(userId) && passenger.getPassword().equals(password)) {
-                        System.out.println("You are now logged in !!");
-                        System.out.println("Welcome " + passenger.getName());
-
-                        return passenger;
-
-                    } else {
-                        System.out.println("Invalid Credentials");
+                        pass = passenger;
+                        yes= true;
                     }
+                }if(yes){
+                    System.out.println("You are now logged in !!");
+                    System.out.println("Welcome " + pass.getName());
+                }else{
+                    System.out.println("Invalid Credentials");
                 }
-
+                return pass;
             } else if (option == 2) {
                 System.out.println("Thank you !! Have a nice day");
                 System.exit(0);
-            }
-            else{
+            } else {
                 System.out.println("Wrong Input, Please Try again !!");
             }
         }

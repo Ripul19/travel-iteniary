@@ -5,12 +5,13 @@ import java.util.List;
 public class TravelPackage {
     private String name;
     private  List<Destination> listOfDestination = new ArrayList<>();
-    private int capacity;
+    private double capacity, cost;
 
-    public TravelPackage(String name, List<Destination> listOfDestination, int capacity){
+    public TravelPackage(String name, List<Destination> listOfDestination, double capacity, double cost){
         this.name = name;
         this.listOfDestination = listOfDestination;
         this.capacity = capacity;
+        this.cost = cost;
     }
 
     //Getters
@@ -22,7 +23,9 @@ public class TravelPackage {
         return this.listOfDestination;
     }
 
-    public int getCapacity(){
+    public double getCapacity(){
         return this.capacity;
     }
+
+    public double getCost() { return this.cost; }
 }
