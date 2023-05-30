@@ -28,15 +28,25 @@ public class Main {
 //        System.out.println("Selected Package: " + output.getSelectedPackage());
 
         System.out.println("----------------------------------------------------------");
-        TravelPackage travelPackage = output.getSelectedPackage();
-        TravelPackage.printPackage(travelPackage);
-
+        System.out.println("Booking Details");
+        System.out.println("----------------------------------------------------------");
+        System.out.println("Passenger Details");
         Passenger passenger = output.getPassenger();
         Passenger.printPassenger(passenger);
+        System.out.println("");
+
+        TravelPackage travelPackage = output.getSelectedPackage();
+        System.out.println("Package Details and activities availability");
+        TravelPackage.printPackage(travelPackage);
+        System.out.println("");
+
 
         Activity activity = output.getActivity();
+        System.out.println("Activity Selected");
         if(activity!= null){
             Activity.printActivity(activity);
+        }else{
+            System.out.println("No Activities selected");
         }
 
 
