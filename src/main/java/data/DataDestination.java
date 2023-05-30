@@ -1,7 +1,7 @@
-package data_2;
+package data;
 
-import travel_2.Activity;
-import travel_2.Destination;
+import travel.Activity;
+import travel.Destination;
 
 import java.util.ArrayList;
 import java.util.HashSet;

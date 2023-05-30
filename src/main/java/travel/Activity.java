@@ -1,4 +1,4 @@
-package travel_2;
+package travel;
 
 public class Activity {
     private String name, description, destination;

@@ -1,4 +1,4 @@
-package travel_2;
+package travel;
 
 public class FinalOutput {
     private Activity activity;

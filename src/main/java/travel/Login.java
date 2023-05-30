@@ -1,4 +1,4 @@
-package travel_2;
+package travel;
 
 import java.util.Scanner;
 

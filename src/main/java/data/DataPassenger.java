@@ -1,6 +1,6 @@
-package data_2;
+package data;
 
-import travel_2.Passenger;
+import travel.Passenger;
 
 import java.util.ArrayList;
 import java.util.List;

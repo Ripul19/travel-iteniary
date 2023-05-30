@@ -1,4 +1,4 @@
-package travel_2;
+package travel;
 
 import java.util.List;
 
@@ -84,5 +84,10 @@ public class Passenger {
             System.out.println("Your activity is booked from the amount present in balance");
 
         }
+    }
+
+    public static void printPassenger(Passenger passenger){
+        System.out.println("Passenger Name "+ passenger.getName());
+        System.out.println("Passenger Number "+ passenger.getNumber());
     }
 }

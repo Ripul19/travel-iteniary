@@ -1,9 +1,9 @@
-package travel_2;
+package travel;
 
-import data_2.DataDestination;
-import data_2.DataPassenger;
-import data_2.DataTravelPackage;
-import data_2.DataActivity;
+import data.DataDestination;
+import data.DataPassenger;
+import data.DataTravelPackage;
+import data.DataActivity;
 
 import java.util.List;
 
@@ -26,6 +26,20 @@ public class Main {
 //        System.out.println("Activity: " + output.getActivity());
 //        System.out.println("Passenger: " + output.getPassenger());
 //        System.out.println("Selected Package: " + output.getSelectedPackage());
+
+        System.out.println("----------------------------------------------------------");
+        TravelPackage travelPackage = output.getSelectedPackage();
+        TravelPackage.printPackage(travelPackage);
+
+        Passenger passenger = output.getPassenger();
+        Passenger.printPassenger(passenger);
+
+        Activity activity = output.getActivity();
+        if(activity!= null){
+            Activity.printActivity(activity);
+        }
+
+
     }
 
 }

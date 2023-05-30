@@ -1,11 +1,10 @@
-package data_2;
+package data;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import travel_2.Activity;
-import travel_2.Destination;
-import travel_2.TravelPackage;
+import travel.Destination;
+import travel.TravelPackage;
 
 
 public class DataTravelPackage {
