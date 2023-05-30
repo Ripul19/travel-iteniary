@@ -12,6 +12,7 @@ public class DataDestination {
 
     public static List<Destination> createHardCodedDestinations(List<Activity> activities) {
         List<Destination> destinationList = new ArrayList<>();
+
         Set<String> uniqueDestinationNames = new HashSet<>();
 
         for(Activity acti: activities){

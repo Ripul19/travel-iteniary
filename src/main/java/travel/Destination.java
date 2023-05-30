@@ -1,7 +1,9 @@
 package travel;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Destination {
     private String destinationName;
@@ -24,6 +26,7 @@ public class Destination {
     public void addActivity(Activity activity) {
         activities.add(activity);
     }
+
 
     //print destination
     public static void printDestination(Destination destination){
