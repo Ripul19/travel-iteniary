@@ -13,6 +13,8 @@ public class Destination {
         this.destinationName = destinationName;
         this.activities= new ArrayList<>();
     }
+    //The functionality to add the list of data is present in DataDestination class
+
 
     //Getters
     public String getName(){
