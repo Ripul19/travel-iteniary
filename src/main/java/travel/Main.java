@@ -22,10 +22,8 @@ public class Main {
         //full booking
         FinalOutput output = Booking.book(allPackages, passengers);
 
-        //print the output
-//        System.out.println("Activity: " + output.getActivity());
-//        System.out.println("Passenger: " + output.getPassenger());
-//        System.out.println("Selected Package: " + output.getSelectedPackage());
+
+        //printing of the details
 
         System.out.println("----------------------------------------------------------");
         System.out.println("Booking Details");
